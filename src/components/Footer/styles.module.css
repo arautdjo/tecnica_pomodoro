@@ -1,0 +1,3 @@
+.footer { display: flex; flex-direction: column; align-items: center; gap: 1rem; font-size: 1.3rem; padding-top: 2rem; }
+.footer a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer a:hover { color: var(--text-default); }

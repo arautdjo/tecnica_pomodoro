@@ -1,0 +1,40 @@
+/* Cada ciclo ganha uma forma própria (linguagem geométrica):
+   foco = círculo sólido · descanso curto = anel com núcleo · descanso longo = losango cônico.
+   O ciclo ativo recebe um halo orbital rotativo. */
+.cycles { display: flex; flex-direction: column; align-items: center; gap: 1.8rem; }
+
+.label {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 1.1rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-muted);
+}
+
+.cycleDots { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.6rem; max-width: 32rem; }
+
+.cycleDot {
+  --c: var(--primary);
+  position: relative; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  animation: dotIn 0.7s var(--ease) both; animation-delay: calc(var(--i) * 70ms);
+}
+@keyframes dotIn { from { opacity: 0; transform: scale(0.1) translateY(1.4rem); } }
+
+.workTime { --c: var(--focus); background: var(--c); box-shadow: 0 0 1.8rem -0.2rem var(--c); }
+
+.shortBreakTime { --c: var(--rest); border: 0.2rem solid var(--c); }
+.shortBreakTime::after { content: ''; position: absolute; inset: 0.3rem; border-radius: 50%; background: var(--c); opacity: 0.45; }
+
+.longBreakTime {
+  --c: var(--long); rotate: 45deg; border-radius: 0.4rem; width: 1.8rem; height: 1.8rem;
+  background: conic-gradient(from 90deg, var(--c), color-mix(in srgb, var(--c) 10%, transparent), var(--c));
+  box-shadow: 0 0 1.8rem -0.4rem var(--c);
+}
+
+.current::before {
+  content: ''; position: absolute; inset: -0.8rem; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--c), transparent 45%, var(--c));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 0.15rem), #000 calc(100% - 0.15rem));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 0.15rem), #000 calc(100% - 0.15rem));
+  animation: orbit 3.6s linear infinite;
+}
+.current { animation: dotIn 0.7s var(--ease) both, breathe 2.4s ease-in-out 0.8s infinite; animation-delay: calc(var(--i) * 70ms), 0.8s; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes breathe { 50% { transform: scale(1.18); } }

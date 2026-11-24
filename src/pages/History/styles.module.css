@@ -1,0 +1,21 @@
+.buttonContainer button {
+  min-width: auto;
+  margin: 0;
+  padding: 1rem;
+}
+
+.buttonContainer button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.responsiveTable { overflow-x: auto; border-radius: var(--radius); background: var(--surface); border: 0.1rem solid var(--border); }
+.responsiveTable table { width: 100%; min-width: 64rem; font-size: 1.5rem; border-collapse: collapse; }
+.responsiveTable th { font-size: 1.1rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; background: transparent; }
+.responsiveTable td { background: transparent; }
+.responsiveTable th, .responsiveTable td { border-bottom: 0.1rem solid var(--border); text-align: left; padding: 1.6rem 2rem; }
+.responsiveTable tbody tr { transition: background 0.2s; }
+.responsiveTable tbody tr:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
+.responsiveTable tr:last-child td { border-bottom: none; }
+.thSort { cursor: pointer; transition: color 0.2s; }
+.thSort:hover { color: var(--text-default); }

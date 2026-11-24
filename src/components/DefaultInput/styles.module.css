@@ -1,0 +1,11 @@
+.input {
+  width: 100%; text-align: center; font: inherit; font-size: 1.8rem; font-weight: 500;
+  padding: 1.6rem 2rem; border-radius: var(--radius);
+  color: var(--text-default); background: var(--surface);
+  border: 0.1rem solid var(--border); outline: none;
+  backdrop-filter: blur(1.2rem);
+  transition: border-color 0.25s, box-shadow 0.25s var(--ease);
+}
+.input:focus { border-color: var(--primary); box-shadow: 0 0 0 0.4rem var(--glow); }
+.input::placeholder { color: var(--text-muted); font-size: 1.5rem; font-weight: 400; }
+.input:disabled { color: var(--text-muted); background: transparent; }

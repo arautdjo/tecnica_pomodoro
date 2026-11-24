@@ -1,0 +1,83 @@
+/* Chronos — design tokens (2026 refresh)
+   Dinâmicas: --gray-*, --text-*  | Fixas: --primary, --focus, --rest, --long, alertas */
+:root {
+  --gray-100: #f4f4f8;
+  --gray-200: #d9d9e3;
+  --gray-300: #a3a3b8;
+  --gray-400: #6e6e86;
+  --gray-500: #4a4a5e;
+  --gray-600: #2e2e3d;
+  --gray-700: #20202c; /* bordas */
+  --gray-800: #15151e; /* cards */
+  --gray-900: #0b0b11; /* fundo */
+
+  --primary-light: #a994ff;
+  --primary: #7c5cff;
+  --primary-dark: #5a3fe0;
+
+  /* cores semânticas dos ciclos */
+  --focus: #ff6b4a;
+  --rest: #3ddc97;
+  --long: #6ea8ff;
+
+  --link-color: #a994ff;
+  --link-hover: #c9bcff;
+
+  --success: #34d399;
+  --warning: #f5a524;
+  --error: #ef4444;
+  --info: #60a5fa;
+
+  --text-over-primary: #ffffff;
+  --text-over-primary-dark: #ffffff;
+  --text-over-primary-light: #0b0b11;
+  --text-over-success: #06281c;
+  --text-over-warning: #2b1a00;
+  --text-over-error: #ffffff;
+  --text-over-info: #07213f;
+
+  --text-default: #f4f4f8;
+  --text-muted: #8a8aa3;
+  --disabled: #2e2e3d;
+  --text-disabled: #6e6e86;
+
+  --surface: color-mix(in srgb, var(--gray-800) 72%, transparent);
+  --border: color-mix(in srgb, var(--gray-100) 9%, transparent);
+  --glow: color-mix(in srgb, var(--primary) 34%, transparent);
+  --radius: 2rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --toastify-color-light: var(--gray-800);
+  --toastify-color-dark: var(--gray-800);
+  --toastify-color-info: var(--info);
+  --toastify-color-success: var(--success);
+  --toastify-color-warning: var(--warning);
+  --toastify-color-error: var(--error);
+  --toastify-text-color-light: #f4f4f8;
+  --toastify-text-color-dark: #f4f4f8;
+  --toastify-color-progress-light: var(--primary);
+  --toastify-color-progress-dark: var(--primary);
+}
+
+:root[data-theme='light'] {
+  --gray-100: #0b0b11;
+  --gray-200: #15151e;
+  --gray-300: #2e2e3d;
+  --gray-400: #4a4a5e;
+  --gray-500: #6e6e86;
+  --gray-600: #a3a3b8;
+  --gray-700: #dcdce6;
+  --gray-800: #ffffff;
+  --gray-900: #f3f3f8;
+
+  --text-default: #0b0b11;
+  --text-muted: #5b5b70;
+  --disabled: #dcdce6;
+  --link-color: #5a3fe0;
+  --link-hover: #3f28b3;
+  --glow: color-mix(in srgb, var(--primary) 22%, transparent);
+  --toastify-color-light: #ffffff;
+  --toastify-color-dark: #ffffff;
+  --toastify-text-color-light: #0b0b11;
+  --toastify-text-color-dark: #0b0b11;
+}

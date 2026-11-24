@@ -1,0 +1,21 @@
+/* barra de abas flutuante, estilo app mobile */
+.menu {
+  position: fixed; left: 50%; bottom: max(2rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%); z-index: 20;
+  display: flex; align-items: center; gap: 0.4rem; padding: 0.7rem;
+  border-radius: 999px; background: var(--surface); border: 0.1rem solid var(--border);
+  backdrop-filter: blur(2rem) saturate(1.6);
+  box-shadow: 0 2rem 4rem -1.2rem rgb(0 0 0 / 0.5);
+  animation: dockIn 0.8s var(--ease) 0.2s both;
+}
+@keyframes dockIn { from { opacity: 0; transform: translate(-50%, 2rem); } }
+
+.menuLink {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 5.2rem; height: 5.2rem; border-radius: 50%;
+  color: var(--text-muted); text-decoration: none;
+  transition: background 0.25s, color 0.25s, transform 0.3s var(--ease);
+}
+.menuLink:hover { background: color-mix(in srgb, var(--primary) 18%, transparent); color: var(--text-default); }
+.menuLink:active { transform: scale(0.9); }
+.menuLink svg { width: 2.2rem; height: 2.2rem; stroke-width: 1.75; }

@@ -1,0 +1,13 @@
+.container {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-size: clamp(9rem, 28vw, 15rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  padding: 2rem 0 0.4rem;
+  background: linear-gradient(180deg, var(--text-default) 35%, var(--text-muted));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

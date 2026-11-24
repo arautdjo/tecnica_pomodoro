@@ -1,0 +1,22 @@
+.button {
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  width: 8.4rem; height: 8.4rem; border-radius: 50%;
+  margin: 2.4rem 0;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), filter 0.2s;
+}
+.button svg { width: 3.6rem; height: 3.6rem; stroke-width: 1.75; }
+.button:hover { transform: translateY(-0.2rem) scale(1.04); }
+.button:active { transform: scale(0.94); }
+.button:disabled { background: var(--disabled); color: var(--text-disabled); box-shadow: none; cursor: not-allowed; }
+
+.green {
+  background: linear-gradient(145deg, var(--primary-light), var(--primary) 55%, var(--primary-dark));
+  color: var(--text-over-primary);
+  box-shadow: 0 1.2rem 3.2rem -0.8rem var(--glow), inset 0 0.1rem 0 rgb(255 255 255 / 0.3);
+}
+.red {
+  background: color-mix(in srgb, var(--error) 14%, var(--gray-800));
+  color: var(--error);
+  box-shadow: inset 0 0 0 0.15rem color-mix(in srgb, var(--error) 55%, transparent);
+}
